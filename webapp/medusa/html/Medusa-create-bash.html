@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2021 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Medusa-create-bash.html
+===
+=== Author: $author$
+===   Date: 10/23/2021
+=====================================================================
+-->
+
+<!--
+=====================================================================
+=== html
+=====================================================================
+-->
+<html>
+    <!--
+    =====================================================================
+    === head
+    =====================================================================
+    -->
+    <head>
+        <title>Medusa - Create bash script</title>
+
+        <!--
+        =====================================================================
+        === style
+        =====================================================================
+        -->
+        <link rel="stylesheet" type="text/css" href="../css/Medusa.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-header.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-footer.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-dropdown.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-popdown.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-menubar.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/Medusa-logo.css"></link>
+        <style type="text/css">
+        </style>
+    
+        <!--
+        =====================================================================
+        === script
+        =====================================================================
+        -->
+        <script type="text/javascript" src="../js/Medusa.js"></script>
+        <script type="text/javascript">
+            onLocationInit('Medusa.html', 'Medusa.html');
+        </script>
+    </head>
+
+    <!--
+    =====================================================================
+    === body
+    =====================================================================
+    -->
+    <body class="body">
+
+        <!--
+        =====================================================================
+        === logo
+        =====================================================================
+        -->
+        <div id="includeLogo" include="Medusa-logo.html">
+            <script>includeHTML('includeLogo');</script>
+        </div>
+        <!--
+        =====================================================================
+        === header
+        =====================================================================
+        -->
+        <div id="includeHeader" include="Medusa-header.html">
+            <script>includeHTML('includeHeader');</script>
+        </div>
+        <!--
+        =====================================================================
+        === popdown
+        =====================================================================
+        -->
+        <div id="includePopdown" include="Medusa-popdown.html">
+            <script>includeHTML('includePopdown');</script>
+        </div>
+        <!--
+        =====================================================================
+        === dropdown
+        =====================================================================
+        -->
+        <div id="includeDropdown" include="Medusa-dropdown.html">
+            <script>includeHTML('includeDropdown');</script>
+        </div>
+        <!--
+        =====================================================================
+        === menubar
+        =====================================================================
+        -->
+        <div id="includeMenubar" include="Medusa-create-bash-menubar.html">
+            <script>includeHTML('includeMenubar');</script>
+        </div>
+
+        <!--
+        =====================================================================
+        === form
+        =====================================================================
+        -->
+        <form name="Form" method="POST" action="../templates/t/bash/bash.t"
+         onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+            <div class="form">
+
+            File: <input name="File" value=""></input>[bash]
+            <input type="radio" name="Extension" value="bash" checked="checked">.bash</input>
+            <input type="radio" name="Extension" value="sh">.sh</input>
+            <input type="radio" name="Extension" value="">no</input>
+            <br/>
+
+            Template: <select name="FormTemplate">
+            <option value="/xthenode/templates/t/bash/bash.t">bash script (/xthenode/templates/t/bash/bash.t)</option>
+            <option value="/xthenode/templates/t/bash/utility-script-bash.t">utility bash script (/xthenode/templates/t/bash/utility-script-bash.t)</option>
+            <option value=""></option>
+            <option value="../templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (../templates/t/t/parameters.t)</option>
+            <option value="../templates/t/t/functions.t">t functions &nbsp;&nbsp; (../templates/t/t/functions.t)</option>
+            <option value=""></option>
+            <option value="/Medusa-cgi/cgi">cgi parameters &nbsp;&nbsp; (/Medusa-cgi/cgi)</option>
+            <option value="/Medusa-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/Medusa-cgi/cgicatch)</option>
+            <option value=""/>
+            </select>
+            <br/>
+
+            <br/>
+            Content-Type: <select name="content_type">
+            <option value="text/plain">text</option>
+            <option value="text/html">html</option>
+            <option value="text/xml">xml</option>
+            <option value="application/json">json</option>
+            <option value="application/javascript">javascript</option>
+            <option value=""></option>
+            </select><br/>
+
+            Action: <select name="FormAction">
+            <option value="../templates/t/bash/bash.t">Create bash script (../templates/t/bash/bash.t)</option>
+            <option value=""></option>
+            <option value="../templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (../templates/t/t/parameters.t)</option>
+            <option value="../templates/t/t/functions.t">t functions &nbsp;&nbsp; (../templates/t/t/functions.t)</option>
+            <option value=""></option>
+            <option value="/Medusa-cgi/cgi">cgi parameters &nbsp;&nbsp; (/Medusa-cgi/cgi)</option>
+            <option value="/Medusa-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/Medusa-cgi/cgicatch)</option>
+            <option value=""/>
+            </select><br/>
+
+            Method: <select name="FormMethod">
+            <option value="POST">POST</option>
+            <option value="GET">GET</option>
+            <option value=""></option>
+            </select><br/>
+
+            <br/>
+            <input type="submit" name="submit" value="submit"/><br/>
+
+            </div>
+        </form>
+    </body>
+</html>
